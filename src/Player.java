@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Player {
 
@@ -10,8 +11,15 @@ public class Player {
 		this.character = character;
 	}
 	
-	public void guessing()
+	public void guessing(Scanner s)
 	{
-		
+		System.out.printf("Who would you like to ask? Type player's name");
+		String response = s.nextLine();
+		System.out.printf("Murderer Guess: ");
+		response = s.nextLine();
+		System.out.printf("Room Guess: ");
+		response = s.nextLine();
+		System.out.printf("Murderer Guess: ");
+		response = s.nextLine();
 	}
 }
