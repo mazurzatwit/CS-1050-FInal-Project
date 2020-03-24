@@ -1,5 +1,12 @@
 
 public class Characters extends Card{
-	private String[] characters = {"Miss Scarlet", "Mrs.Peacock", "Professor Plum", "Mr.Boddy", "Colonel Mustard", "Mrs.White", "Mr.Green"};
+	private String name;
+	private String color;
+	
+	public Characters(String name, String color)
+	{
+		this.name = name;
+		this.color = color;
+	}
 
 }

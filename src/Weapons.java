@@ -1,5 +1,10 @@
 
 public class Weapons extends Card{
-	private String[] weapons = {"Rope", "Candlestick", "Knife", "Wrench", "Revolver", "Dagger"};
+	private String weapon;
+	
+	public Weapons(String weapon)
+	{
+		this.weapon = weapon;
+	}
 
 }

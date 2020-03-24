@@ -1,6 +1,13 @@
 
 public class Rooms extends Card{
-	private String[] rooms = {"Ballroom", "Library", "Kitchen", "Study", "Lounge", "Dining Room", "Hall", "Billiard Room", "Conservatory"};
+	private String name;
+	private boolean door; //if true door is "open", else door is "closed"
+	
+	public Rooms(String name, boolean door)
+	{
+		this.name = name;
+		this.door = door;
+	}
 	
 
 }
