@@ -13,7 +13,7 @@ public abstract class Card {
 	private void Weapons() {
 		ArrayList<Weapons> weapons = new ArrayList<>();
 	}
-	
+	 
 	public Card()
 	{
 		
