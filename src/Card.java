@@ -1,6 +1,8 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 public abstract class Card {
+	private Random rand = new Random();
 	
 	private void Character(){
 		ArrayList<Characters> characters = new ArrayList<>();
