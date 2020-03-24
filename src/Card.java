@@ -4,6 +4,7 @@ public abstract class Card {
 	
 	private void Character(){
 		ArrayList<Characters> characters = new ArrayList<>();
+		characters.add(new Characters("Mrs.White", "White"));
 	}
 	
 	private static void Rooms(){
