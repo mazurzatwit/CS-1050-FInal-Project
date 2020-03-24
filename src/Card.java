@@ -10,7 +10,6 @@ public abstract class Card {
 		characters.add(new Characters("Mrs.Peacock", "Blue"));
 		characters.add(new Characters("Miss.Scarlet", "Red"));
 		characters.add(new Characters("Mr.Green", "Green"));
-		characters.add(new Characters("Mr.Boddy", "Black"));
 	}
 	
 	private static void Rooms(){
@@ -42,6 +41,11 @@ public abstract class Card {
 	}
 	
 	public void showCards()
+	{
+		
+	}
+	
+	public void Solution()
 	{
 		
 	}
