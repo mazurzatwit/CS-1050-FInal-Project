@@ -45,7 +45,7 @@ public abstract class Card {
 	
 	public void Solution()
 	{
-	
+		Object[] solution = new Object[3];
 	}
 			
 }
