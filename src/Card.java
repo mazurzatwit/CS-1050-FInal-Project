@@ -15,6 +15,16 @@ public abstract class Card {
 	
 	private static void Rooms(){
 		ArrayList<Rooms> rooms = new ArrayList<>();
+		rooms.add(new Rooms("Library", true));
+		rooms.add(new Rooms("Ballroom", true));
+		rooms.add(new Rooms("Kitchen", true));
+		rooms.add(new Rooms("Conservatory", true));
+		rooms.add(new Rooms("Billard Room", true));
+		rooms.add(new Rooms("Study", true));
+		rooms.add(new Rooms("Hall", true));
+		rooms.add(new Rooms("Lounge", true));
+		rooms.add(new Rooms("Dining Room", true));
+		
 	}
 	
 	private void Weapons() {
