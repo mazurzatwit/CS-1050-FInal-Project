@@ -2,13 +2,12 @@
 public class Characters extends Card{
 	private String name;
 	private String color;
-	private Rooms location;
+	//private Rooms location;
 	
-	public Characters(String name, String color, Rooms location)
+	public Characters(String name, String color)
 	{
 		this.name = name;
 		this.color = color;
-		this.location = location;
 	}
 
 }
