@@ -33,7 +33,6 @@ public abstract class Card {
 		weapons.add(new Weapons("Candlestick"));
 		weapons.add(new Weapons("Lead Pipe"));
 		weapons.add(new Weapons("Rope"));
-		weapons.add(new Weapons("Revolver"));
 		weapons.add(new Weapons("Dagger (Knife"));
 	}
 	 
