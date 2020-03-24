@@ -28,8 +28,13 @@ public abstract class Card {
 	
 	private void Weapons() {
 		ArrayList<Weapons> weapons = new ArrayList<>();
+		weapons.add(new Weapons("Wrench"));
+		weapons.add(new Weapons("Candlestick"));
+		weapons.add(new Weapons("Lead Pipe"));
+		weapons.add(new Weapons("Rope"));
+		weapons.add(new Weapons("Dagger (Knife"));
 	}
-	
+	 
 	public Card()
 	{
 		
