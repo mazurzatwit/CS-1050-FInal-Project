@@ -7,15 +7,15 @@ public abstract class Card {
 	private ArrayList<Rooms> rooms = new ArrayList<>();
 	private ArrayList<Weapons> weapons = new ArrayList<>();
 	
-	public void Character(ArrayList<Characters> c){
+	public ArrayList<Characters> Character(ArrayList<Characters> c){
 		c.add(new Characters("Mrs.White", "White"));
 		c.add(new Characters("Professor Plum", "Purple"));
 		c.add(new Characters("Colonel Mustard", "Yellow"));
 		c.add(new Characters("Mrs.Peacock", "Blue"));
 		c.add(new Characters("Miss.Scarlet", "Red"));
 		c.add(new Characters("Mr.Green", "Green"));
+		return c;
 	}
-	
 	
 	public static void Rooms(ArrayList<Rooms> r){
 		r.add(new Rooms("Library", true));
