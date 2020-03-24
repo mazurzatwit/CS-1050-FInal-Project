@@ -24,6 +24,7 @@ public abstract class Card {
 		rooms.add(new Rooms("Hall", true));
 		rooms.add(new Rooms("Lounge", true));
 		rooms.add(new Rooms("Dining Room", true));
+		
 	}
 	
 	private void Weapons() {
