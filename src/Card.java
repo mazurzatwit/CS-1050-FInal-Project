@@ -8,6 +8,9 @@ public abstract class Card {
 	
 	private static void Rooms(){
 		ArrayList<Rooms> rooms = new ArrayList<>();
+		
+		
+		
 	}
 	
 	private void Weapons() {
