@@ -11,7 +11,7 @@ public class Hand {
 	
 	@Override
 	public String toString() { // prints the hand
-		String output = "";
+		String output = "no clue what's going on";
 		return output;
 	}
 	
