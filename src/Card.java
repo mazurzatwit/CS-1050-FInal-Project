@@ -3,6 +3,7 @@ import java.util.Random;
 
 public abstract class Card {
 	private Random rand = new Random();
+
 	 private ArrayList<Characters> characters = new ArrayList<>();
 	 private ArrayList<Rooms> rooms = new ArrayList<>();
 	 private ArrayList<Weapons> weapons = new ArrayList<>();
@@ -19,6 +20,7 @@ public abstract class Card {
 	}
 	
 
+
 	public static ArrayList<Rooms> Rooms(ArrayList<Rooms> r){
 		r.add(new Rooms("Library", true));
 		r.add(new Rooms("Ballroom", true));
@@ -33,7 +35,6 @@ public abstract class Card {
 	}
 	
 	private ArrayList<Weapons> Weapons(ArrayList<Weapons> w) {
-		ArrayList<Weapons> weapons = new ArrayList<>();
 		w.add(new Weapons("Wrench"));
 		w.add(new Weapons("Candlestick"));
 		w.add(new Weapons("Lead Pipe"));
@@ -67,7 +68,6 @@ public abstract class Card {
          num=rand.nextInt(weapons.size());
          solution[2]=weapons.get(num);
          weapons.remove(num);
-
 	}
 			
 }
