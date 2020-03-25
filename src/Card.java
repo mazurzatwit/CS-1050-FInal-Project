@@ -3,11 +3,13 @@ import java.util.Random;
 
 public abstract class Card {
 	private Random rand = new Random();
-	private ArrayList<Characters> characters = new ArrayList<>();
-	private ArrayList<Rooms> rooms = new ArrayList<>();
-	private ArrayList<Weapons> weapons = new ArrayList<>();
-	
-	private ArrayList<Characters> Characters(ArrayList<Characters> c){
+
+	 private ArrayList<Characters> characters = new ArrayList<>();
+	 private ArrayList<Rooms> rooms = new ArrayList<>();
+	 private ArrayList<Weapons> weapons = new ArrayList<>();
+
+
+	public ArrayList<Characters> Character(ArrayList<Characters> c){
 		c.add(new Characters("Mrs.White", "White"));
 		c.add(new Characters("Professor Plum", "Purple"));
 		c.add(new Characters("Colonel Mustard", "Yellow"));
@@ -17,7 +19,9 @@ public abstract class Card {
 		return c;
 	}
 	
-	private static ArrayList<Rooms> Rooms(ArrayList<Rooms> r){
+
+
+	public static ArrayList<Rooms> Rooms(ArrayList<Rooms> r){
 		r.add(new Rooms("Library", true));
 		r.add(new Rooms("Ballroom", true));
 		r.add(new Rooms("Kitchen", true));
@@ -56,6 +60,7 @@ public abstract class Card {
 		 num=rand.nextInt(weapons.size());
 		 solution[2]=weapons.get(num);
 		 weapons.remove(num);
+
 	}
 	
 
