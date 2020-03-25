@@ -40,19 +40,24 @@ public abstract class Card {
 		return w;
 	}
 	 
-	public Card()
-	{
-		
-	}
 	
-	public void showCards()
-	{
-		
-	}
 	
 	public void Solution()
 	{
 		 Object[] solution = new Object[3];
+		 int num=rand.nextInt(characters.size()); 
+		 solution[0]=characters.get(num);
+		 characters.remove(num);
+		
+		 num=rand.nextInt(rooms.size());
+		 solution[1]=rooms.get(num);
+		 rooms.remove(num);
+		 
+		 num=rand.nextInt(weapons.size());
+		 solution[2]=weapons.get(num);
+		 weapons.remove(num);
 	}
+	
+
 			
 }
