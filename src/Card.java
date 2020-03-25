@@ -3,10 +3,11 @@ import java.util.Random;
 
 public abstract class Card {
 	private Random rand = new Random();
-	private ArrayList<Characters> characters = new ArrayList<>();
-	private ArrayList<Rooms> rooms = new ArrayList<>();
-	private ArrayList<Weapons> weapons = new ArrayList<>();
-	
+	 private ArrayList<Characters> characters = new ArrayList<>();
+	 private ArrayList<Rooms> rooms = new ArrayList<>();
+	 private ArrayList<Weapons> weapons = new ArrayList<>();
+
+
 	public ArrayList<Characters> Character(ArrayList<Characters> c){
 		c.add(new Characters("Mrs.White", "White"));
 		c.add(new Characters("Professor Plum", "Purple"));
@@ -17,7 +18,8 @@ public abstract class Card {
 		return c;
 	}
 	
-	public static void Rooms(ArrayList<Rooms> r){
+
+	public static ArrayList<Rooms> Rooms(ArrayList<Rooms> r){
 		r.add(new Rooms("Library", true));
 		r.add(new Rooms("Ballroom", true));
 		r.add(new Rooms("Kitchen", true));
@@ -27,17 +29,25 @@ public abstract class Card {
 		r.add(new Rooms("Hall", true));
 		r.add(new Rooms("Lounge", true));
 		r.add(new Rooms("Dining Room", true));
+		return r;
 	}
 	
-	public void Weapons(ArrayList<Weapons> w) {
+	private ArrayList<Weapons> Weapons(ArrayList<Weapons> w) {
+		ArrayList<Weapons> weapons = new ArrayList<>();
 		w.add(new Weapons("Wrench"));
 		w.add(new Weapons("Candlestick"));
 		w.add(new Weapons("Lead Pipe"));
 		w.add(new Weapons("Rope"));
 		w.add(new Weapons("Revolver"));
 		w.add(new Weapons("Dagger (Knife)"));
+		return w;
 	}
 	 
+	public Card()
+	{
+		
+	}
+	
 	public void showCards()
 	{
 		
@@ -45,7 +55,19 @@ public abstract class Card {
 	
 	public void Solution()
 	{
-		Object[] solution = new Object[3];
+		 Object[] solution = new Object[3];
+         int num=rand.nextInt(characters.size()); 
+         solution[0]=characters.get(num);
+         characters.remove(num);
+        
+         num=rand.nextInt(rooms.size());
+         solution[1]=rooms.get(num);
+         rooms.remove(num);
+         
+         num=rand.nextInt(weapons.size());
+         solution[2]=weapons.get(num);
+         weapons.remove(num);
+
 	}
 			
 }
