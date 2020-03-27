@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Random;
 
-public abstract class Deck {
+public abstract class Deck extends Card{
 	private Random rand = new Random();
 
 	 private ArrayList<Characters> characters = new ArrayList<>();
@@ -32,7 +32,7 @@ public abstract class Deck {
 		return r;
 	}
 	
-	private ArrayList<Weapons> Weapons(ArrayList<Weapons> w) {
+	public ArrayList<Weapons> Weapons(ArrayList<Weapons> w) {
 		w.add(new Weapons("Wrench"));
 		w.add(new Weapons("Candlestick"));
 		w.add(new Weapons("Lead Pipe"));
