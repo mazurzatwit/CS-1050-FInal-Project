@@ -46,7 +46,9 @@ public abstract class Deck extends Card{
 	
 	public void shuffle() 
 	{
-		//idk if we need this yet
+		ArrayList<String> deck = fillDeck();
+		ArrayList<String> shuffledDeck = new ArrayList<>();
+		
 	}
 	
 	public abstract void deal();
