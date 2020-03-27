@@ -1,8 +1,8 @@
 import java.util.ArrayList;
-import java.util.Random;
+
 
 public class Card {
-	private Random rand = new Random();
+	
 
 	 protected ArrayList<Characters> characters = new ArrayList<>();
 	 protected ArrayList<Rooms> rooms = new ArrayList<>();
