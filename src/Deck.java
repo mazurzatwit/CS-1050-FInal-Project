@@ -4,11 +4,6 @@ import java.util.Random;
 public abstract class Deck extends Card{
 	private Random rand = new Random();
 
-	 private ArrayList<Characters> characters = new ArrayList<>();
-	 private ArrayList<Rooms> rooms = new ArrayList<>();
-	 private ArrayList<Weapons> weapons = new ArrayList<>();
-
-
 	public ArrayList<Characters> Character(ArrayList<Characters> c){
 		c.add(new Characters("Mrs.White", "White"));
 		c.add(new Characters("Professor Plum", "Purple"));

@@ -4,9 +4,9 @@ import java.util.Random;
 public class Card {
 	private Random rand = new Random();
 
-	 private ArrayList<Characters> characters = new ArrayList<>();
-	 private ArrayList<Rooms> rooms = new ArrayList<>();
-	 private ArrayList<Weapons> weapons = new ArrayList<>();
+	 protected ArrayList<Characters> characters = new ArrayList<>();
+	 protected ArrayList<Rooms> rooms = new ArrayList<>();
+	 protected ArrayList<Weapons> weapons = new ArrayList<>();
 	 
 	 public Card()
 	 {
