@@ -20,7 +20,7 @@ public abstract class Deck extends Card{
         weapons.remove(num);
 	}
 	
-	public void fillDeck()
+	public ArrayList<String> fillDeck()
 	{
 		ArrayList<String> deck = new ArrayList<>();
 		String[] cString = new String[5];
@@ -41,9 +41,15 @@ public abstract class Deck extends Card{
 			wString[k] = weapons.get(k).toString();
 			deck.add(wString[k]);
 		}
+		return deck;
 	}
 	
-	public void deal()
+	public void shuffle() 
+	{
+		//idk if we need this yet
+	}
+	
+	public abstract void deal();
 	{
 		
 	}
