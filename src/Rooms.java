@@ -8,6 +8,11 @@ public class Rooms extends Card{
 		this.name = name;
 		this.door = door;
 	}
+	@Override
+	public String toString() {
+		
+		return null;
+	}
 	
 
 }
