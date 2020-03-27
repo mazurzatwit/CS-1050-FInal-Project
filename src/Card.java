@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Random;
 
-public abstract class Card {
+public class Card {
 	private Random rand = new Random();
 
 	 private ArrayList<Characters> characters = new ArrayList<>();

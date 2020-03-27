@@ -58,5 +58,15 @@ public abstract class Deck {
         solution[2] = weapons.get(num);
         weapons.remove(num);
 	}
+	
+	public void fillDeck()
+	{
+		
+	}
+	
+	public void deal()
+	{
+		
+	}
 
 }
