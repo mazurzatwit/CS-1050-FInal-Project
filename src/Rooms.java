@@ -10,8 +10,9 @@ public class Rooms extends Card{
 	}
 	@Override
 	public String toString() {
-		//fsg
-		return null;
+		String string = "";
+		string = String.format("Rooms: %s, Door: %s",name, door);
+		return string;
 	}
 	
 
