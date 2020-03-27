@@ -50,8 +50,5 @@ public abstract class Deck extends Card{
 	}
 	
 	public abstract void deal();
-	{
-		
-	}
 
 }
