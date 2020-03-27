@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Player {
+public class Player extends Hand {
 
 	private String name;
 	private String character;
@@ -10,6 +10,7 @@ public class Player {
 		this.name = name;
 		this.character = character;
 	}
+	
 	
 	public void guessing(Scanner s)
 	{

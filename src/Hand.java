@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class Hand extends Deck {
 
@@ -19,9 +20,15 @@ public class Hand extends Deck {
 
 
 	@Override
-	public void deal() {
-		// TODO Auto-generated method stub
+	public void deal(int size) {
+		ArrayList<String> newDeck = shuffle();
+		if(newDeck.size()/size == 0) {
+			//shuffle deck evenly
+		} else if (newDeck.size()/size != 0) {
+			// mod shuffle deck
+		}  
 		
 	}
+	
 	
 }
