@@ -44,7 +44,7 @@ public abstract class Deck extends Card{
 		return deck;
 	}
 	
-	public void shuffle() 
+	public ArrayList<String> shuffle() 
 	{
 		ArrayList<String> deck = fillDeck();
 		ArrayList<String> shuffledDeck = new ArrayList<>();
@@ -55,7 +55,7 @@ public abstract class Deck extends Card{
 			shuffledDeck.add(i, deck.get(num));
 			deck.remove(num);
 		}
-		
+		return shuffledDeck;
 	}
 	
 	public abstract void deal();
