@@ -9,5 +9,14 @@ public class Characters extends Card{
 		this.name = name;
 		this.color = color;
 	}
+	
+	@Override
+	public String toString()
+	{
+		String str = "";
+		str = String.format("Character: %s, Color: %s", name, color);
+		return str;
+	}
+	
 
 }
