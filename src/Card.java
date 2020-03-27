@@ -19,8 +19,6 @@ public abstract class Card {
 		return c;
 	}
 	
-
-
 	public static ArrayList<Rooms> Rooms(ArrayList<Rooms> r){
 		r.add(new Rooms("Library", true));
 		r.add(new Rooms("Ballroom", true));
@@ -45,24 +43,20 @@ public abstract class Card {
 	}
 	 
 	
-	
 	public void Solution()
 	{
 		 Object[] solution = new Object[3];
-		 int num=rand.nextInt(characters.size()); 
-		 solution[0]=characters.get(num);
-		 characters.remove(num);
-		
-		 num=rand.nextInt(rooms.size());
-		 solution[1]=rooms.get(num);
-		 rooms.remove(num);
-		 
-		 num=rand.nextInt(weapons.size());
-		 solution[2]=weapons.get(num);
-		 weapons.remove(num);
-
+         int num=rand.nextInt(characters.size()); 
+         solution[0]=characters.get(num);
+         characters.remove(num);
+        
+         num=rand.nextInt(rooms.size());
+         solution[1]=rooms.get(num);
+         rooms.remove(num);
+         
+         num=rand.nextInt(weapons.size());
+         solution[2]=weapons.get(num);
+         weapons.remove(num);
 	}
-	
-
 			
 }
