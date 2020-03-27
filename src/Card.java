@@ -7,6 +7,13 @@ public class Card {
 	 private ArrayList<Characters> characters = new ArrayList<>();
 	 private ArrayList<Rooms> rooms = new ArrayList<>();
 	 private ArrayList<Weapons> weapons = new ArrayList<>();
+	 
+	 public Card()
+	 {
+		 Character(characters);
+		 Rooms(rooms);
+		 Weapons(weapons);
+	 }
 
 
 	public ArrayList<Characters> Character(ArrayList<Characters> c){
@@ -32,7 +39,7 @@ public class Card {
 		return r;
 	}
 	
-	private ArrayList<Weapons> Weapons(ArrayList<Weapons> w) {
+	public ArrayList<Weapons> Weapons(ArrayList<Weapons> w) {
 		w.add(new Weapons("Wrench"));
 		w.add(new Weapons("Candlestick"));
 		w.add(new Weapons("Lead Pipe"));
