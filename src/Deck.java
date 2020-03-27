@@ -48,6 +48,13 @@ public abstract class Deck extends Card{
 	{
 		ArrayList<String> deck = fillDeck();
 		ArrayList<String> shuffledDeck = new ArrayList<>();
+		int num = 0;
+		for(int i = 0; i < deck.size(); i++)
+		{
+			num = rand.nextInt(deck.size());
+			shuffledDeck.add(i, deck.get(num));
+			deck.remove(num);
+		}
 		
 	}
 	
