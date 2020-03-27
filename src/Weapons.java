@@ -6,5 +6,13 @@ public class Weapons extends Card{
 	{
 		this.weapon = weapon;
 	}
+	
+	@Override 
+	public String toString() {
+		
+		String weapon = String.format("Weapons: %s", weapons);
+		return weapon;
+		
+	}
 
 }

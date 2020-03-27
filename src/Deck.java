@@ -2,8 +2,6 @@ import java.util.Random;
 
 public abstract class Deck extends Card{
 	private Random rand = new Random();
-
-	 
 	
 	public void Solution()
 	{
