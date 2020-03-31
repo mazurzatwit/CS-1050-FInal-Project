@@ -7,6 +7,7 @@ public class Player extends Hand {
 	
 	public Player(String name, String character)
 	{
+		super();
 		this.name = name;
 		this.character = character;
 	}

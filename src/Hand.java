@@ -1,10 +1,12 @@
 import java.util.ArrayList;
 
 public class Hand extends Deck {
+	private static ArrayList<String> hand;
+	private ArrayList<String> newDeck = shuffle();
 	
 	public Hand()
 	{
-		//constructor 
+		hand = new ArrayList<>(); 
 	}
 
 	//interaction guess between players
@@ -25,14 +27,36 @@ public class Hand extends Deck {
 
 
 	@Override
-	public void deal(ArrayList<Player> p) {
-		ArrayList<String> newDeck = shuffle();
-		if(newDeck.size()/p.size() == 0) {
-			//shuffle deck evenly
-		} else if (newDeck.size()/p.size()!= 0) {
+	public ArrayList<String> deal(int size) {
+		ArrayList<String> holds = new ArrayList<>();
+		int handSize = newDeck.size()/size;
+		if(size == 2 || size == 3)
+		{
+			for(int i = 0; i <= handSize; i++)
+			{
+				String curr = newDeck.get(i);
+				holds.add(curr);
+				newDeck.remove(curr);
+			}
+		}
+		else if(size == 4)
+		{
+			
+		}
+		/*
+		if(handSize == 0) {
+			for(int i = 0; i <= handSize; i++)
+			{
+				String curr = newDeck.get(i);
+				holds.add(curr);
+				newDeck.remove(curr);
+			}
+		} else if (handSize != 0) {
+			
 			// mod shuffle deck
-		}  
-		
+		} 
+		*/ 
+		return holds;
 	}
 	
 	
