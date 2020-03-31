@@ -4,7 +4,7 @@ public class Hand extends Deck {
 	
 	public Hand()
 	{
-		
+		//constructor 
 	}
 
 	//interaction guess between players
