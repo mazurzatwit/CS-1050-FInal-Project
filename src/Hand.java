@@ -1,6 +1,11 @@
 import java.util.ArrayList;
 
 public class Hand extends Deck {
+	
+	public Hand()
+	{
+		
+	}
 
 	//interaction guess between players
 	public void showCards() 
