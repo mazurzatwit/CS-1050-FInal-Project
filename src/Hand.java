@@ -25,11 +25,11 @@ public class Hand extends Deck {
 
 
 	@Override
-	public void deal(int size, ArrayList<Player> p) {
+	public void deal(ArrayList<Player> p) {
 		ArrayList<String> newDeck = shuffle();
-		if(newDeck.size()/size == 0) {
+		if(newDeck.size()/p.size() == 0) {
 			//shuffle deck evenly
-		} else if (newDeck.size()/size != 0) {
+		} else if (newDeck.size()/p.size()!= 0) {
 			// mod shuffle deck
 		}  
 		
