@@ -4,28 +4,29 @@ import java.util.Scanner;
 public class GameManager extends Deck{
 	private int numPlayers;
 	private ArrayList<String> newDeck = shuffle();
+	private Scanner input = new Scanner(System.in);
 	
 	public GameManager(int num)
 	{
 		num = numPlayers;
 	}
 	
-	public String[] playerName(Scanner s)
+	public String[] playerName()
 	{
 		String[] names = new String[numPlayers];
 		for(int i = 0; i < names.length; i++)
 		{
-			names[i] = s.nextLine();
+			names[i] = input.nextLine();
 		}
 		return names;
 	}
 	
-	public String[] playerCharacter(Scanner s)
+	public String[] playerCharacter()
 	{
 		String[] characters = new String[numPlayers];
 		for(int i = 0; i < characters.length; i++)
 		{
-			characters[i] = s.nextLine();
+			characters[i] = input.nextLine();
 		}
 		return characters;
 	}
