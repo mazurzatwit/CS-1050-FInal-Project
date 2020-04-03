@@ -1,13 +1,12 @@
 import java.util.Scanner;
 
-public class Player extends Hand {
+public class Player {
 
 	private String name;
 	private String character;
 	
 	public Player(String name, String character)
 	{
-		super();
 		this.name = name;
 		this.character = character;
 	}
