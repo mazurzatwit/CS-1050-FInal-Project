@@ -4,11 +4,13 @@ public class Player {
 
 	private String name;
 	private String character;
+	private Hand hand;
 	
-	public Player(String name, String character)
+	public Player(String name, String character, Hand hand)
 	{
 		this.name = name;
 		this.character = character;
+		this.hand = hand;
 	}
 	
 	

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class GameManager extends Deck{
 	private int numPlayers;
@@ -9,7 +10,25 @@ public class GameManager extends Deck{
 		num = numPlayers;
 	}
 	
+	public String[] playerName(Scanner s)
+	{
+		String[] names = new String[numPlayers];
+		for(int i = 0; i < names.length; i++)
+		{
+			names[i] = s.nextLine();
+		}
+		return names;
+	}
 	
+	public String[] playerCharacter(Scanner s)
+	{
+		String[] characters = new String[numPlayers];
+		for(int i = 0; i < characters.length; i++)
+		{
+			characters[i] = s.nextLine();
+		}
+		return characters;
+	}
 
 	@Override
 	public void deal() {
