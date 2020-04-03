@@ -4,11 +4,12 @@ import java.util.Scanner;
 public class GameManager extends Deck{
 	private int numPlayers;
 	private ArrayList<String> newDeck = shuffle();
-	private Scanner input = new Scanner(System.in);
+	private Scanner input;
 	
-	public GameManager(int num)
+	public GameManager(int num, Scanner s)
 	{
 		num = numPlayers;
+		input = s;
 	}
 	
 	public String[] playerName()
@@ -34,6 +35,8 @@ public class GameManager extends Deck{
 	@Override
 	public void deal() {
 		int handSize = newDeck.size()/numPlayers;
+		String[] names = playerName();
+		String[] characters = playerCharacter();
 		if(numPlayers%newDeck.size() == 0)
 		{
 			for(int i = 1; i <= numPlayers; i++)
@@ -44,7 +47,7 @@ public class GameManager extends Deck{
 					hand[j] = newDeck.get(j);
 					newDeck.remove(j);
 				}
-				Hand h = new Hand(hand);
+				Player p = new Player(names[i-1],characters[i-1], new Hand(hand));
 			}
 		}
 		else if(numPlayers%newDeck.size() != 0)
@@ -76,10 +79,10 @@ public class GameManager extends Deck{
 					hand4[i] = newDeck.get(i);
 					newDeck.remove(i);
 				}
-				Hand h1 = new Hand(hand1);
-				Hand h2 = new Hand(hand2);
-				Hand h3 = new Hand(hand3);
-				Hand h4 = new Hand(hand4);
+				Player p1 = new Player(names[0],characters[0], new Hand(hand1));
+				Player p2 = new Player(names[1],characters[1], new Hand(hand2));
+				Player p3 = new Player(names[2],characters[2], new Hand(hand3));
+				Player p4 = new Player(names[3],characters[3], new Hand(hand4));
 			}
 			else if(numPlayers == 5)
 			{
@@ -113,12 +116,12 @@ public class GameManager extends Deck{
 				{
 					hand5[i] = newDeck.get(i);
 					newDeck.remove(i);
-				}			
-				Hand h1 = new Hand(hand1);
-				Hand h2 = new Hand(hand2);
-				Hand h3 = new Hand(hand3);
-				Hand h4 = new Hand(hand4);
-				Hand h5 = new Hand(hand5);
+				}	
+				Player p1 = new Player(names[0],characters[0], new Hand(hand1));
+				Player p2 = new Player(names[1],characters[1], new Hand(hand2));
+				Player p3 = new Player(names[2],characters[2], new Hand(hand3));
+				Player p4 = new Player(names[3],characters[3], new Hand(hand4));
+				Player p5 = new Player(names[4],characters[4], new Hand(hand5));
 			}
 		}
 		/*
