@@ -13,6 +13,13 @@ public class Player {
 		this.hand = hand;
 	}
 	
+	public String toString()
+	{
+		String str = "";
+		str = String.format("%s (%s): %s", character, name, hand);
+		return str;
+	}
+	
 	
 	public void guessing(Scanner s)
 	{

@@ -58,6 +58,6 @@ public abstract class Deck extends Card{
 		return shuffledDeck;
 	}
 	
-	public abstract void deal();
+	public abstract ArrayList<Player> deal();
 
 }

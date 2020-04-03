@@ -33,10 +33,11 @@ public class GameManager extends Deck{
 	}
 
 	@Override
-	public void deal() {
+	public ArrayList<Player> deal() {
 		int handSize = newDeck.size()/numPlayers;
 		String[] names = playerName();
 		String[] characters = playerCharacter();
+		ArrayList<Player> allPlayers = new ArrayList<>();
 		if(numPlayers%newDeck.size() == 0)
 		{
 			for(int i = 1; i <= numPlayers; i++)
@@ -47,7 +48,10 @@ public class GameManager extends Deck{
 					hand[j] = newDeck.get(j);
 					newDeck.remove(j);
 				}
-				Player p = new Player(names[i-1],characters[i-1], new Hand(hand));
+				for(int k = 0; k < allPlayers.size(); k++)
+				{
+					allPlayers.add(new Player(names[i-1],characters[i-1], new Hand(hand)));
+				}
 			}
 		}
 		else if(numPlayers%newDeck.size() != 0)
@@ -83,6 +87,11 @@ public class GameManager extends Deck{
 				Player p2 = new Player(names[1],characters[1], new Hand(hand2));
 				Player p3 = new Player(names[2],characters[2], new Hand(hand3));
 				Player p4 = new Player(names[3],characters[3], new Hand(hand4));
+				
+				allPlayers.add(p1);
+				allPlayers.add(p2);
+				allPlayers.add(p3);
+				allPlayers.add(p4);
 			}
 			else if(numPlayers == 5)
 			{
@@ -122,6 +131,12 @@ public class GameManager extends Deck{
 				Player p3 = new Player(names[2],characters[2], new Hand(hand3));
 				Player p4 = new Player(names[3],characters[3], new Hand(hand4));
 				Player p5 = new Player(names[4],characters[4], new Hand(hand5));
+				
+				allPlayers.add(p1);
+				allPlayers.add(p2);
+				allPlayers.add(p3);
+				allPlayers.add(p4);
+				allPlayers.add(p5);
 			}
 		}
 		/*
@@ -266,7 +281,7 @@ public class GameManager extends Deck{
 			Hand h6 = new Hand(hand6);
 		}
 		*/
-		
+		return allPlayers;
 	}
 	
 	
