@@ -1,12 +1,12 @@
-import java.util.ArrayList;
+
 
 public class Hand {
-	private static ArrayList<String> hand;
+	private String[] hand;
 	
 	
-	public Hand()
+	public Hand(String[] hand)
 	{
-		hand = new ArrayList<>(); 
+		 this.hand = hand;
 	}
 
 	//interaction guess between players

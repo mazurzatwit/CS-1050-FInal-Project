@@ -12,17 +12,31 @@ public class GameManager extends Deck{
 	
 
 	@Override
-	public ArrayList<String> deal() {
-		ArrayList<String> holds = new ArrayList<>();
+	public void deal() {
 		int handSize = newDeck.size()/numPlayers;
-		if(numPlayers == 2 || numPlayers == 3)
+		if(numPlayers == 3)
 		{
-			for(int i = 0; i <= handSize; i++)
+			String[] hand1 = new String[handSize];
+			String[] hand2 = new String[handSize];
+			String[] hand3 = new String[handSize];
+			for(int i = 0; i < newDeck.size(); i++)
 			{
-				String curr = newDeck.get(i);
-				holds.add(curr);
-				newDeck.remove(curr);
+				hand1[i] = newDeck.get(i);
+				newDeck.remove(i);
 			}
+			for(int i = 0; i < newDeck.size(); i++)
+			{
+				hand2[i] = newDeck.get(i);
+				newDeck.remove(i);
+			}
+			for(int i = 0; i < newDeck.size(); i++)
+			{
+				hand3[i] = newDeck.get(i);
+				newDeck.remove(i);
+			}
+			Hand h1 = new Hand(hand1);
+			Hand h2 = new Hand(hand2);
+			Hand h3 = new Hand(hand3);
 		}
 		else if(numPlayers == 4)
 		{
@@ -41,7 +55,6 @@ public class GameManager extends Deck{
 			// mod shuffle deck
 		} 
 		*/ 
-		return holds;
 	}
 	
 	
