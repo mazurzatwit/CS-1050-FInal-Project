@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
-public class Hand extends Deck {
+public class Hand {
 	private static ArrayList<String> hand;
-	private ArrayList<String> newDeck = shuffle();
+	
 	
 	public Hand()
 	{
@@ -23,41 +23,7 @@ public class Hand extends Deck {
 		String output = "no clue what's going on";
 		return output;
 	}
-
-
-
-	@Override
-	public ArrayList<String> deal(int size) {
-		ArrayList<String> holds = new ArrayList<>();
-		int handSize = newDeck.size()/size;
-		if(size == 2 || size == 3)
-		{
-			for(int i = 0; i <= handSize; i++)
-			{
-				String curr = newDeck.get(i);
-				holds.add(curr);
-				newDeck.remove(curr);
-			}
-		}
-		else if(size == 4)
-		{
-			
-		}
-		/*
-		if(handSize == 0) {
-			for(int i = 0; i <= handSize; i++)
-			{
-				String curr = newDeck.get(i);
-				holds.add(curr);
-				newDeck.remove(curr);
-			}
-		} else if (handSize != 0) {
-			
-			// mod shuffle deck
-		} 
-		*/ 
-		return holds;
-	}
+		
 	
 	
 }
