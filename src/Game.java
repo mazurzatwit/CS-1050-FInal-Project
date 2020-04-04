@@ -26,6 +26,7 @@ public class Game {
 			System.out.printf("Enter player #%d name: ", j);
 			String player = s.nextLine();
 			gm.playerName();
+			System.out.println();
 			System.out.printf("%s: Enter the character you want to be: ", player);
 			String character = s.nextLine();
 			gm.playerCharacter();
