@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Player {
@@ -21,15 +22,19 @@ public class Player {
 	}
 	
 	
-	public void guessing(Scanner s)
+	public ArrayList<String> guessing(Scanner s)
 	{
-		System.out.printf("Who would you like to ask? Type player's name");
-		String response = s.nextLine();
+		ArrayList<String> guess = new ArrayList<>();
 		System.out.printf("Murderer Guess: ");
-		response = s.nextLine();
+		String response = s.nextLine();
+		guess.add(response);
 		System.out.printf("Room Guess: ");
 		response = s.nextLine();
+		guess.add(response);
 		System.out.printf("Murderer Guess: ");
 		response = s.nextLine();
+		guess.add(response);
+		
+		return guess;
 	}
 }

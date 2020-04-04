@@ -13,7 +13,7 @@ public class Hand {
 	public void showCards() 
 	{
 	
-		//loop for asking about final guess
+	
 	}	
 	
 	

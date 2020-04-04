@@ -42,9 +42,22 @@ public class Game {
 		
 		ArrayList<Player> players = gm.deal(finalnames, finalCharacters);
 		
-		for(int i = 0; i < players.size(); i++)
-		{
-			System.out.printf("%s%n", players.get(i));
+//		for(int i = 0; i < players.size(); i++)
+//		{
+//			System.out.printf("%s%n", players.get(i));
+//		}
+		
+		for (Player p: players ) {
+			System.out.printf("Do you want a FINAL guess? (y/n)");
+			String ans = s.nextLine();
+			
+			if(ans.equals("y")) {
+			
+			} else {
+				System.out.printf("Who would you like to ask? Type player's name: ");
+				String response = s.nextLine();
+				ArrayList<String> guesses = p.guessing(s);
+			}
 		}
 
 	}
