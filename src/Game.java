@@ -26,11 +26,15 @@ public class Game {
 			System.out.printf("Enter player #%d name: ", j);
 			String player = s.nextLine();
 			gm.playerName();
-			System.out.println();
-			System.out.printf("Player #%d: Enter the character you want to be: ", j);
+		}
+		
+		for(int k = 1; k <= numPlayers; k++)
+		{
+			System.out.printf("Player %d: Enter the character you want to be: ", k);
 			String character = s.nextLine();
 			gm.playerCharacter();
 		}
+		
 		
 		ArrayList<Player> players = gm.deal();
 		
