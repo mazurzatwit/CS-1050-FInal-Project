@@ -1,5 +1,5 @@
 
-public class Weapons extends Card{
+public class Weapons{
 	private String weapon;
 	
 	public Weapons(String weapon)
@@ -10,7 +10,7 @@ public class Weapons extends Card{
 	@Override 
 	public String toString() {
 		
-		String weapon = String.format("Weapons: %s", weapons);
+		String weapon = String.format("Weapons: %s", this.weapon);
 		return weapon;
 		
 	}

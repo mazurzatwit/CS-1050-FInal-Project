@@ -1,5 +1,5 @@
 
-public class Rooms extends Card{
+public class Rooms{
 	private String name;
 	private boolean door; //if true door is "open", else door is "closed"
 	

@@ -10,19 +10,20 @@ public class Card {
 	 
 	 public Card()
 	 {
-		 Character();
+		 Character(characters);
 		 Rooms(rooms);
 		 Weapons(weapons);
 	 }
 
 
-	public void Character(){
-		characters.add(new Characters("Mrs.White", "White"));
-		characters.add(new Characters("Professor Plum", "Purple"));
-		characters.add(new Characters("Colonel Mustard", "Yellow"));
-		characters.add(new Characters("Mrs.Peacock", "Blue"));
-		characters.add(new Characters("Miss.Scarlet", "Red"));
-		characters.add(new Characters("Mr.Green", "Green"));
+	public ArrayList<Characters> Character(ArrayList<Characters> c){
+		c.add(new Characters("Mrs.White", "White"));
+		c.add(new Characters("Professor Plum", "Purple"));
+		c.add(new Characters("Colonel Mustard", "Yellow"));
+		c.add(new Characters("Mrs.Peacock", "Blue"));
+		c.add(new Characters("Miss.Scarlet", "Red"));
+		c.add(new Characters("Mr.Green", "Green"));
+		return c;
 	}
 	
 	public static ArrayList<Rooms> Rooms(ArrayList<Rooms> r){

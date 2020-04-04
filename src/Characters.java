@@ -1,5 +1,5 @@
 
-public class Characters extends Card{
+public class Characters{
 	private String name;
 	private String color;
 	//private Rooms location;
