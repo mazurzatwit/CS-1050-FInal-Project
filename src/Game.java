@@ -19,24 +19,27 @@ public class Game {
 		int numPlayers = s.nextInt();
 		
 		Card c = new Card();
-		GameManager gm = new GameManager(numPlayers, s);
+		GameManager gm = new GameManager(numPlayers);
 		
+		String[] allNames = new String[numPlayers];
 		for(int j = 1; j <= numPlayers; j++)
 		{
 			System.out.printf("Enter player #%d name: ", j);
 			String player = s.nextLine();
-			gm.playerName();
+			allNames[j-1] = player;
 		}
+		String[] finalnames = gm.playerName(allNames);
 		
+		String[] allCharacters = new String[numPlayers];
 		for(int k = 1; k <= numPlayers; k++)
 		{
 			System.out.printf("Player %d: Enter the character you want to be: ", k);
 			String character = s.nextLine();
-			gm.playerCharacter();
+			allCharacters[k-1] = character;
 		}
+		String[] finalCharacters = gm.playerCharacter(allCharacters);
 		
-		
-		ArrayList<Player> players = gm.deal();
+		ArrayList<Player> players = gm.deal(finalnames, finalCharacters);
 		
 		for(int i = 0; i < players.size(); i++)
 		{

@@ -59,6 +59,6 @@ public abstract class Deck extends Card{
 		return shuffledDeck;
 	}
 	
-	public abstract ArrayList<Player> deal();
+	public abstract ArrayList<Player> deal(String[] names, String[] characters);
 
 }

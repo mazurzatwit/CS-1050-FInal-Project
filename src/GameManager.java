@@ -4,39 +4,36 @@ import java.util.Scanner;
 public class GameManager extends Deck{
 	private int numPlayers;
 	private ArrayList<String> newDeck = shuffle();
-	private Scanner input;
+
 	
-	public GameManager(int num, Scanner s)
+	public GameManager(int num)
 	{
 		numPlayers = num;
-		input = s;
 	}
 	
-	public String[] playerName()
+	public String[] playerName(String[] playerNames)
 	{
 		String[] names = new String[numPlayers];
 		for(int i = 0; i < names.length; i++)
 		{
-			names[i] = input.nextLine();
+			names[i] = playerNames[i];
 		}
 		return names;
 	}
 	
-	public String[] playerCharacter()
+	public String[] playerCharacter(String[] playerCharacters)
 	{
 		String[] characters = new String[numPlayers];
 		for(int i = 0; i < characters.length; i++)
 		{
-			characters[i] = input.nextLine();
+			characters[i] = playerCharacters[i];
 		}
 		return characters;
 	}
 
 	@Override
-	public ArrayList<Player> deal() {
+	public ArrayList<Player> deal(String[] names, String[] characters) {
 		int handSize = newDeck.size()/numPlayers;
-		String[] names = playerName();
-		String[] characters = playerCharacter();
 		ArrayList<Player> allPlayers = new ArrayList<>();
 		if(numPlayers%newDeck.size() == 0)
 		{
