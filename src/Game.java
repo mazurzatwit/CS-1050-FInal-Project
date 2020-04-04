@@ -17,6 +17,7 @@ public class Game {
 		
 		System.out.printf("How many players?");
 		int numPlayers = s.nextInt();
+		s.nextLine();
 		
 		Card c = new Card();
 		GameManager gm = new GameManager(numPlayers);
