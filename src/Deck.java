@@ -24,6 +24,7 @@ public abstract class Deck extends Card{
 	{
 		ArrayList<String> deck = new ArrayList<>();
 		String[] cString = new String[5];
+		Solution();
 		for(int i = 0; i < characters.size(); i++)
 		{
 			cString[i] = characters.get(i).toString();
