@@ -29,8 +29,6 @@ public class Game {
 			System.out.printf("%s: Enter the character you want to be: ", player);
 			String character = s.nextLine();
 			gm.playerCharacter();
-			break;
-			//
 		}
 		
 		ArrayList<Player> players = gm.deal();
