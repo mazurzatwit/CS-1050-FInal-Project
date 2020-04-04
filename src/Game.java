@@ -57,6 +57,28 @@ public class Game {
 				System.out.printf("Who would you like to ask? Type player's name: ");
 				String response = s.nextLine();
 				ArrayList<String> guesses = p.guessing(s);
+				Hand guessingH = new Hand();
+				for(int a = 0; a < players.size(); a++)
+				{
+					if(response.equals(players.get(a).getName()))
+					{
+						guessingH = players.get(a).getHand();
+					}
+				}
+				int counter = 0;
+				for(int w = 0; w < guesses.size(); w++)
+				{
+					String curr = guesses.get(w);
+					for(int z = 0; z < guessingH.handLength(); z++)
+					{
+						if(curr.equals(guessingH.showCards(z)))
+							System.out.printf("Card Match: %s%n", guessingH.showCards(z));
+						else
+							counter++;
+					}
+				}
+				if(counter == (guessingH.handLength()*3))
+					System.out.printf("No Matches!");
 			}
 		}
 

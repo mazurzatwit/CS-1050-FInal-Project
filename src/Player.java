@@ -21,6 +21,15 @@ public class Player {
 		return str;
 	}
 	
+	public Hand getHand()
+	{
+		return hand;
+	}
+	
+	public String getName()
+	{
+		return name;
+	}
 	
 	public ArrayList<String> guessing(Scanner s)
 	{

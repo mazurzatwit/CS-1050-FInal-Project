@@ -8,14 +8,25 @@ public class Hand {
 	{
 		 this.hand = hand;
 	}
+	
+	public Hand()
+	{
+		for(int i = 0; i < this.hand.length; i++)
+		{
+			hand[i] = "";
+		}
+	}
 
 	//interaction guess between players
-	public void showCards() 
+	public String showCards(int index) 
 	{
-	
-	
+		return hand[index];
 	}	
 	
+	public int handLength()
+	{
+		return hand.length;
+	}
 	
 	
 	@Override
