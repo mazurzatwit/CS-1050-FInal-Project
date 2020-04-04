@@ -8,7 +8,7 @@ public class GameManager extends Deck{
 	
 	public GameManager(int num, Scanner s)
 	{
-		num = numPlayers;
+		numPlayers = num;
 		input = s;
 	}
 	
