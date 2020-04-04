@@ -30,7 +30,7 @@ public class Game {
 			String character = s.nextLine();
 			gm.playerCharacter();
 			break;
-			//
+			
 		}
 		
 		ArrayList<Player> players = gm.deal();
