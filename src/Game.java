@@ -21,9 +21,9 @@ public class Game {
 		Card c = new Card();
 		GameManager gm = new GameManager(numPlayers, s);
 		
-		for(int j = 0; j <= numPlayers; j++)
+		for(int j = 1; j <= numPlayers; j++)
 		{
-			System.out.printf("Enter player #%d name: ", j+1);
+			System.out.printf("Enter player #%d name: ", j);
 			String player = s.nextLine();
 			gm.playerName();
 			System.out.printf("%s: Enter the character you want to be: ", player);
