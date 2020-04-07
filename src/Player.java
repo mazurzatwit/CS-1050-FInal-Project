@@ -17,7 +17,7 @@ public class Player {
 	public String toString()
 	{
 		String str = "";
-		str = String.format("%s (%s): %s", character, name, hand);
+		str = String.format("%s (%s): %s", character, name, hand.toString());
 		return str;
 	}
 	
