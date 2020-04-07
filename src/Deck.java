@@ -6,7 +6,7 @@ public abstract class Deck extends Card{
 	
 	public void Solution()
 	{
-		 Object[] solution = new Object[3];
+		Object[] solution = new Object[3];
         int num = rand.nextInt(characters.size()); 
         solution[0] = characters.get(num);
         characters.remove(num);
