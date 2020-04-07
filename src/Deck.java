@@ -4,20 +4,22 @@ import java.util.Random;
 public abstract class Deck extends Card{
 	private Random rand = new Random();
 	
-	public void Solution()
+	public String[] Solution()
 	{
-		 Object[] solution = new Object[3];
+		 String[] solution = new String[3];
         int num = rand.nextInt(characters.size()); 
-        solution[0] = characters.get(num);
+        solution[0] = characters.get(num).toString();
         characters.remove(num);
        
         num = rand.nextInt(rooms.size());
-        solution[1] = rooms.get(num);
+        solution[1] = rooms.get(num).toString();
         rooms.remove(num);
         
         num = rand.nextInt(weapons.size());
-        solution[2] = weapons.get(num);
+        solution[2] = weapons.get(num).toString();
         weapons.remove(num);
+        
+        return solution;
 	}
 	
 	public ArrayList<String> fillDeck()
