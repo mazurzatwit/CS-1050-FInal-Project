@@ -52,7 +52,7 @@ public class Game {
 			String ans = s.nextLine();
 			
 			if(ans.equals("y")) {
-			
+				
 			} else {
 				System.out.printf("Who would you like to ask? Type player's name: ");
 				String response = s.nextLine();
