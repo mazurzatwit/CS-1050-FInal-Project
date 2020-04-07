@@ -52,7 +52,27 @@ public class Game {
 			String ans = s.nextLine();
 			
 			if(ans.equals("y")) {
-				
+				String[] solution = gm.Solution();
+				ArrayList<String> guesses = p.guessing(s);
+				int counter = 0;
+				for(int n = 0; n < solution.length; n++)
+				{
+					String curr = solution[n];
+					for(int o = 0; o < guesses.size(); o++)
+					{
+						if(curr.equals(guesses.get(o)))
+						{
+							counter++;
+						}
+					}
+				}
+				if(counter == 3)
+				{
+					System.out.printf("Correct! You have won!");
+					System.exit(0);
+				}
+				else if(counter < 3)
+					System.out.printf("Wrong!Sorry!");
 			} else {
 				System.out.printf("Who would you like to ask? Type player's name: ");
 				String response = s.nextLine();
