@@ -33,7 +33,7 @@ public class Game extends Application{
 			
 		Scanner s = new Scanner(System.in);
 		
-		System.out.printf("PUBLIC SERVICE ANNOUCEMENT: Please have a notebook or a small piece of paper handy to keep track of your guesses. Thank you!");
+		System.out.println("PUBLIC SERVICE ANNOUCEMENT: Please have a notebook or a small piece of paper handy to keep track of your guesses. Thank you!");
 		System.out.printf("How many players?");
 		int numPlayers = s.nextInt();
 		s.nextLine();
