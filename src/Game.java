@@ -1,18 +1,18 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Game {
+import javafx.application.Application;
+import javafx.stage.Stage;
+
+public class Game extends Application{
 
 	public static void main(String[] args) {
-		/*
-		Characters c = new Characters("Zoe", "Blue");
-		Weapons w = new Weapons("Dagger");
-		Rooms r = new Rooms("Living Room", true);
-		
-		System.out.printf("%s%n", c);
-		System.out.printf("%s%n", w);
-		System.out.printf("%s%n", r);
-		*/
+		launch(args);
+
+	}
+
+	@Override
+	public void start(Stage arg0) throws Exception {
 		Scanner s = new Scanner(System.in);
 		
 		System.out.printf("PUBLIC SERVICE ANNOUCEMENT: Please have a notebook or a small piece of paper handy to keep track of your guesses. Thank you!");
@@ -109,6 +109,6 @@ public class Game {
 					System.out.printf("No Matches!");
 			}
 		}
-
+		
 	}
 }
