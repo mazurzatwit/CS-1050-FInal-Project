@@ -33,10 +33,12 @@ public class Game extends Application{
 			
 		Scanner s = new Scanner(System.in);
 		
-		System.out.println("PUBLIC SERVICE ANNOUCEMENT: Please have a notebook or a small piece of paper handy to keep track of your guesses. Thank you!");
+		System.out.printf("Welcome to Clue! %n%n");
+		System.out.printf("PUBLIC SERVICE ANNOUCEMENT: Please have a notebook or a small piece of paper handy to keep track of your guesses. Thank you! %n%n%n");
 		System.out.printf("How many players?");
 		int numPlayers = s.nextInt();
 		s.nextLine();
+		System.out.println();
 		
 		Card c = new Card();
 		GameManager gm = new GameManager(numPlayers);
@@ -47,22 +49,25 @@ public class Game extends Application{
 			System.out.printf("Enter player #%d name: ", j);
 			String player = s.nextLine();
 			allNames[j-1] = player;
+			System.out.printf("%n");
 		}
 		String[] finalnames = gm.playerName(allNames);
 		
+		System.out.printf("%n%n%n");
 		String[] allCharacters = new String[numPlayers];
 		for(int k = 1; k <= numPlayers; k++)
 		{
-			System.out.printf("Player %d: Enter the character you want to be: ", k);
 			System.out.printf("Choose a character: %n"
 					+ "Mrs. White (White) %n"
 					+ "Professor Plum (Purple) %n"
-					+ "Colonel Mustard (Yellow)%n "
-					+ "Mrs. Peacock (Blue) %n "
+					+ "Colonel Mustard (Yellow)%n"
+					+ "Mrs. Peacock (Blue) %n"
 					+ "Miss Scarlet (Red) %n"
-					+ "Mr. Green (Green) %n");
+					+ "Mr. Green (Green) %n%n");
+			System.out.printf("Player %d: Enter the character name you want to be from the above list: ", k);
 			String character = s.nextLine();
 			allCharacters[k-1] = character;
+			System.out.printf("%n%n%n");
 		}
 		String[] finalCharacters = gm.playerCharacter(allCharacters);
 		
