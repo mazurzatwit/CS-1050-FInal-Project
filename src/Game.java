@@ -36,12 +36,13 @@ public class Game {
 		for(int k = 1; k <= numPlayers; k++)
 		{
 			System.out.printf("Player %d: Enter the character you want to be: ", k);
-			System.out.printf("Mrs. White (White)"
-					+ "Professor Plum (Purple) "
-					+ "Colonel Mustard (Yellow) "
-					+ "Mrs. Peacock (Blue) "
-					+ "Miss Scarlet (Red)"
-					+ "Mr. Green (Green)");
+			System.out.printf("Choose a character: %n"
+					+ "Mrs. White (White) %n"
+					+ "Professor Plum (Purple) %n"
+					+ "Colonel Mustard (Yellow)%n "
+					+ "Mrs. Peacock (Blue) %n "
+					+ "Miss Scarlet (Red) %n"
+					+ "Mr. Green (Green) %n");
 			String character = s.nextLine();
 			allCharacters[k-1] = character;
 		}
