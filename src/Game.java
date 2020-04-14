@@ -2,14 +2,18 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 public class Game extends Application{
+	double oX, oY;
+	double oTX, oTY;
 
 	public static void main(String[] args) {
 		launch(args);
@@ -89,6 +93,32 @@ public class Game extends Application{
 		lounge.setLayoutY(250);
 		board.getChildren().addAll(diningRoom, hall, library, ballroom, study, billardRoom, conservatory, kitchen, lounge);
 		
+		EventHandler<MouseEvent> pressed = new EventHandler<MouseEvent>()
+		{
+			@Override
+			public void handle(MouseEvent m)
+			{
+				oX = m.getSceneX();
+				oY = m.getSceneY();
+				oTX = ((Circle)(m.getSource())).getTranslateX();
+				oTY = ((Circle)(m.getSource())).getTranslateY();
+			}
+		};
+		
+		EventHandler<MouseEvent> dragged = new EventHandler<MouseEvent>()
+		{
+			@Override
+			public void handle(MouseEvent m)
+			{
+				double newOX = m.getSceneX() - oX;
+				double newOY = m.getSceneY() - oY;
+				double newOTX = oTX + newOX;
+				double newOTY = oTY + newOY;
+				
+				((Circle)(m.getSource())).setTranslateX(newOTX);
+				((Circle)(m.getSource())).setTranslateY(newOTY);
+			}
+		};
 		
 		//character Circles
 		Circle white = new Circle();
@@ -97,6 +127,8 @@ public class Game extends Application{
 		white.setRadius(25);
 		white.setStroke(Color.BLACK);
 		white.setFill(Color.GHOSTWHITE);
+		white.setOnMousePressed(pressed);
+		white.setOnMouseDragged(dragged);
 		
 		Circle plum = new Circle();
 		plum.setCenterX(200);
@@ -104,6 +136,8 @@ public class Game extends Application{
 		plum.setRadius(25);
 		plum.setStroke(Color.BLACK);
 		plum.setFill(Color.PURPLE);
+		plum.setOnMousePressed(pressed);
+		plum.setOnMouseDragged(dragged);
 		
 		Circle mustard = new Circle();
 		mustard.setCenterX(300);
@@ -111,6 +145,8 @@ public class Game extends Application{
 		mustard.setRadius(25);
 		mustard.setStroke(Color.BLACK);
 		mustard.setFill(Color.GOLDENROD);
+		mustard.setOnMousePressed(pressed);
+		mustard.setOnMouseDragged(dragged);
 		
 		Circle peacock = new Circle();
 		peacock.setCenterX(400);
@@ -118,6 +154,8 @@ public class Game extends Application{
 		peacock.setRadius(25);
 		peacock.setStroke(Color.BLACK);
 		peacock.setFill(Color.MEDIUMBLUE);
+		peacock.setOnMousePressed(pressed);
+		peacock.setOnMouseDragged(dragged);
 		
 		Circle scarlet = new Circle();
 		scarlet.setCenterX(200);
@@ -125,6 +163,8 @@ public class Game extends Application{
 		scarlet.setRadius(25);
 		scarlet.setStroke(Color.BLACK);
 		scarlet.setFill(Color.RED);
+		scarlet.setOnMousePressed(pressed);
+		scarlet.setOnMouseDragged(dragged);
 		
 		Circle green = new Circle();
 		green.setCenterX(400);
@@ -132,6 +172,8 @@ public class Game extends Application{
 		green.setRadius(25);
 		green.setStroke(Color.BLACK);
 		green.setFill(Color.OLIVEDRAB);
+		green.setOnMousePressed(pressed);
+		green.setOnMouseDragged(dragged);
 		
 		board.getChildren().addAll(white, plum, mustard, peacock, scarlet, green);
 		
