@@ -91,7 +91,6 @@ public class Game extends Application{
 		
 		
 		//character Circles
-		
 		Circle white = new Circle();
 		white.setCenterX(300);
 		white.setCenterY(200);
