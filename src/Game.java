@@ -14,22 +14,7 @@ public class Game extends Application{
 	}
 
 	@Override
-	public void start(Stage arg0) throws Exception {
-		Pane board = new Pane();
-		Button diningRoom = new Button("Dining Room");
-		Button hall = new Button("Hall");
-		Button library = new Button("Library");
-		Button ballroom = new Button("Ballroom");
-		Button study = new Button("Study");
-		Button billardRoom = new Button("Billard Room");
-		Button conservatory = new Button("Conservatory");
-		Button kitchen = new Button("Kitchen");
-		Button lounge = new Button("Lounge");
-		board.getChildren().addAll(diningRoom, hall, library, ballroom, study, billardRoom, conservatory, kitchen, lounge);
-		Scene s1 = new Scene(board, 500, 500);
-		arg0.setTitle("Welcome to Clue!");
-		arg0.setScene(s1);
-		arg0.show();	
+	public void start(Stage arg0) throws Exception {	
 			
 		Scanner s = new Scanner(System.in);
 		
@@ -72,6 +57,22 @@ public class Game extends Application{
 		String[] finalCharacters = gm.playerCharacter(allCharacters);
 		
 		ArrayList<Player> players = gm.deal(finalnames, finalCharacters);
+		
+		Pane board = new Pane();
+		Button diningRoom = new Button("Dining Room");
+		Button hall = new Button("Hall");
+		Button library = new Button("Library");
+		Button ballroom = new Button("Ballroom");
+		Button study = new Button("Study");
+		Button billardRoom = new Button("Billard Room");
+		Button conservatory = new Button("Conservatory");
+		Button kitchen = new Button("Kitchen");
+		Button lounge = new Button("Lounge");
+		board.getChildren().addAll(diningRoom, hall, library, ballroom, study, billardRoom, conservatory, kitchen, lounge);
+		Scene s1 = new Scene(board, 500, 500);
+		arg0.setTitle("Welcome to Clue!");
+		arg0.setScene(s1);
+		arg0.show();
 		
 //		for(int i = 0; i < players.size(); i++)
 //		{
