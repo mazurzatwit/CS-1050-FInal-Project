@@ -71,6 +71,7 @@ public class Game extends Application{
 		
 		Pane board = new Pane();
 		board.setMinSize(500, 500);
+		board.setStyle("-fx-background-color: #CD853F;");
 		Button diningRoom = new Button("Dining Room");
 		diningRoom.setMaxHeight(200);
 		diningRoom.setMaxWidth(200); //supposed to change button size
