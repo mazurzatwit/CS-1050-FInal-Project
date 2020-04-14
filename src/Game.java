@@ -26,10 +26,15 @@ public class Game extends Application{
 		
 		System.out.printf("Welcome to Clue! %n%n");
 		System.out.printf("PUBLIC SERVICE ANNOUCEMENT: Please have a notebook or a small piece of paper handy to keep track of your guesses. Thank you! %n%n%n");
-		System.out.printf("How many players?");
+		System.out.printf("Enter an amount of players between 3-6: ");
 		int numPlayers = s.nextInt();
 		s.nextLine();
 		System.out.println();
+		
+		if(numPlayers<3 || numPlayers>6) {
+			System.out.printf("You have entered an incorrect amount of players. Please start the game over.%n");
+			System.exit(0);
+		}
 		
 		Card c = new Card();
 		GameManager gm = new GameManager(numPlayers);
@@ -55,7 +60,7 @@ public class Game extends Application{
 					+ "Mrs. Peacock (Blue) %n"
 					+ "Miss Scarlet (Red) %n"
 					+ "Mr. Green (Green) %n%n");
-			System.out.printf("Player %d: Enter the character name you want to be from the above list: ", k);
+			System.out.printf("Player %d: Enter the character you want to be from the above list (NAME ONLY): ", k);
 			String character = s.nextLine();
 			allCharacters[k-1] = character;
 			System.out.printf("%n%n%n");
