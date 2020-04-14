@@ -98,7 +98,7 @@ public class Game extends Application{
 		study.setLayoutY(0);
 		study.setOnAction(e -> {System.out.printf("You are now in the study.%n");});
 		Button billardRoom = new Button("Billard Room");
-		billardRoom.setStyle("-fx-background-color: #0000CD;");
+		billardRoom.setStyle("-fx-background-color: #87CEFA;");
 		billardRoom.setLayoutX(250);
 		billardRoom.setLayoutY(500);
 		billardRoom.setOnAction(e -> {System.out.printf("You are now in the billard room.%n");});
