@@ -175,7 +175,7 @@ public class Game extends Application{
 		mustard.setOnMouseDragged(dragged);
 		
 		Circle peacock = new Circle();
-		peacock.setCenterX(510);
+		peacock.setCenterX(525);
 		peacock.setCenterY(375);
 		peacock.setRadius(25);
 		peacock.setStroke(Color.BLACK);
