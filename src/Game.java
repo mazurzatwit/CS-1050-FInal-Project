@@ -227,7 +227,7 @@ public class Game extends Application{
 				
 				if(ans.equals("y")) 
 				{
-					String[] solution = gm.Solution();
+					String[] solution = gm.getSolution();
 					ArrayList<String> guesses = p.guessing(s);
 					int counter = 0;
 					for(int n=0; n < solution.length; n++)

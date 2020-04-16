@@ -30,6 +30,11 @@ public class GameManager extends Deck{
 		}
 		return characters;
 	}
+	
+	public String[] getSolution()
+	{
+		return solution;
+	}
 
 	@Override
 	public ArrayList<Player> deal(String[] names, String[] characters) {

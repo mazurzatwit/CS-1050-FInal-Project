@@ -3,6 +3,7 @@ import java.util.Random;
 
 public abstract class Deck extends Card{
 	private Random rand = new Random();
+	protected String[] solution;
 	
 	public String[] Solution()
 	{
@@ -26,7 +27,7 @@ public abstract class Deck extends Card{
 	{
 		ArrayList<String> deck = new ArrayList<>();
 		String[] cString = new String[5];
-		Solution();
+		solution = Solution();
 		for(int i = 0; i < characters.size(); i++)
 		{
 			cString[i] = characters.get(i).toString();
