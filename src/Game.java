@@ -212,11 +212,14 @@ public class Game extends Application{
 		
 		boolean alpha = true;
 		TextField text = new TextField();
+		Label label1 = new Label();
+		board.getChildren().addAll(label1, text);
+		
 		while(alpha) 
 		{
 			for(Player p: players) 
 			{
-				Label label1 = new Label("Do you want to move rooms?(y/n)");
+				label1.setText("Do you want to move rooms?(y/n)");
 				String ans = text.getText();	
 				if(ans.equals("y")) 
 				{
