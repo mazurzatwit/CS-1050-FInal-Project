@@ -244,7 +244,8 @@ public class Game extends Application{
 					if(counter == 3)
 					{
 						label1.setText("Correct! You have done did it, Congrats Sherlock!!");
-						System.exit(0);
+						alpha = false;
+						//System.exit(0);
 					}
 					else if(counter < 3)
 					{
