@@ -232,7 +232,19 @@ public class Game extends Application{
 				if(ans.equals("y")) 
 				{
 					String[] solution = gm.getSolution();
-					ArrayList<String> guesses = p.guessing(s);
+					ArrayList<String> guesses = new ArrayList<>();
+					TextField character = new TextField();
+					character.setPromptText("Enter Character Guess");
+					guesses.add(character.getText());
+					board.getChildren().add(character);
+					TextField weapon = new TextField();
+					weapon.setPromptText("Enter Weapon Guess");
+					guesses.add(weapon.getText());
+					board.getChildren().add(weapon);
+					TextField room = new TextField();
+					weapon.setPromptText("Enter Room Guess");
+					guesses.add(room.getText());
+					board.getChildren().add(room);
 					int counter = 0;
 					for(int n=0; n < solution.length; n++)
 					{
