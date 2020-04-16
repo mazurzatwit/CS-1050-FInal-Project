@@ -212,81 +212,82 @@ public class Game extends Application{
 		
 		boolean alpha = true;
 		TextField text = new TextField();
-		Label label1 = new Label();
+		Label label1 = new Label("Do you want to move rooms? (y/n)");
 		board.getChildren().addAll(label1, text);
 		
-		while(alpha) 
-		{
-			for(Player p: players) 
-			{
-				label1.setText("Do you want to move rooms?(y/n)");
-				String ans = text.getText();	
-				if(ans.equals("y")) 
-				{
-					label1.setText("Drag your designated circle your chosen roon and click the button of that room.");
-				}
-				label1.setText("Do you want to make a FINAL GUESS? (y/n)");
-				ans=text.getText();
-				
-				if(ans.equals("y")) 
-				{
-					String[] solution = gm.getSolution();
-					ArrayList<String> guesses = p.guessing(s);
-					int counter = 0;
-					for(int n=0; n < solution.length; n++)
-					{
-						String curr = solution[n];
-						for(int o=0; o< guesses.size(); o++)
-						{
-							if(curr.equals(guesses.get(o)))
-							{
-								counter++;
-							}
-						}
-					}
-					if(counter == 3)
-					{
-						label1.setText("Correct! You have done did it, Congrats Sherlock!!");
-						alpha = false;
-						//System.exit(0);
-					}
-					else if(counter < 3)
-					{
-						label1.setText("Wrong! Sorry! You have lost!");
-					}
-				} else {
-					label1.setText("Who would you like to ask? Type players name: ");
-					ans = text.getText();
-					ArrayList<String> guesses = p.guessing(s);
-					Hand guessingH = new Hand();
-					for(int a = 0; a < players.size(); a++)
-					{
-						if(ans.equals(players.get(a).getName()))
-						{
-							guessingH = players.get(a).getHand();
-						}
-					}
-					int counter=0;
-					
-					for(int w = 0; w < guesses.size(); w++)
-					{
-						String curr = guesses.get(w);
-						for(int z = 0; z < guessingH.handLength(); z++)
-						{
-							if(curr.equals(guessingH.showCards(z)))
-								System.out.printf("Card Match: %s%n", guessingH.showCards(z));
-							else
-								counter++;
-						}
-					}
-					if(counter == (guessingH.handLength()*3))
-					{
-						System.out.printf("No Matches!");
-					}	
-				}
-			}
-		}
+//		while(alpha) 
+//		{
+//			for(Player p: players) 
+//			{
+//				label1.setText("Do you want to move rooms?(y/n)");
+//				String ans = text.getText();	
+//				if(ans.equals("y")) 
+//				{
+//					label1.setText("Drag your designated circle your chosen roon and click the button of that room.");
+//				}
+//				label1.setText("Do you want to make a FINAL GUESS? (y/n)");
+//				ans=text.getText();
+//				
+//				if(ans.equals("y")) 
+//				{
+//					String[] solution = gm.getSolution();
+//					ArrayList<String> guesses = p.guessing(s);
+//					int counter = 0;
+//					for(int n=0; n < solution.length; n++)
+//					{
+//						String curr = solution[n];
+//						for(int o=0; o< guesses.size(); o++)
+//						{
+//							if(curr.equals(guesses.get(o)))
+//							{
+//								counter++;
+//							}
+//						}
+//					}
+//					if(counter == 3)
+//					{
+//						label1.setText("Correct! You have done did it, Congrats Sherlock!!");
+//						alpha = false;
+//						//System.exit(0);
+//					}
+//					else if(counter < 3)
+//					{
+//						label1.setText("Wrong! Sorry! You have lost!");
+//					}
+//				} else {
+//					label1.setText("Who would you like to ask? Type players name: ");
+//					ans = text.getText();
+//					ArrayList<String> guesses = p.guessing(s);
+//					Hand guessingH = new Hand();
+//					for(int a = 0; a < players.size(); a++)
+//					{
+//						if(ans.equals(players.get(a).getName()))
+//						{
+//							guessingH = players.get(a).getHand();
+//						}
+//					}
+//					int counter=0;
+//					
+//					for(int w = 0; w < guesses.size(); w++)
+//					{
+//						String curr = guesses.get(w);
+//						for(int z = 0; z < guessingH.handLength(); z++)
+//						{
+//							if(curr.equals(guessingH.showCards(z)))
+//								System.out.printf("Card Match: %s%n", guessingH.showCards(z));
+//							else
+//								counter++;
+//						}
+//					}
+//					if(counter == (guessingH.handLength()*3))
+//					{
+//						System.out.printf("No Matches!");
+//					}	
+//				}
+//			}
+//		}
 			
+// THIS IS OUR OLD CODE*********************************************************************************************		
 		
 //		for (Player p: players ) {
 //			System.out.printf("Do you want to move rooms?(y/n)");
