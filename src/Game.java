@@ -287,7 +287,7 @@ public class Game extends Application{
 				} else {
 					label1.setText("Who would you like to ask? Type players name: ");
 					ans = text.getText();
-					ArrayList<String> guesses = p.guessing(s);
+					ArrayList<String> guesses = new ArrayList<>();
 					Hand guessingH = new Hand();
 					for(int a = 0; a < players.size(); a++)
 					{
