@@ -28,7 +28,6 @@ public class Game extends Application{
 	public void start(Stage arg0) throws Exception {	
 			
 		Scanner s = new Scanner(System.in);
-		boolean alpha = false;
 		
 		System.out.printf("Welcome to Clue! %n%n");
 		System.out.printf("PUBLIC SERVICE ANNOUCEMENT: Please have a notebook or a small piece of paper handy to keep track of your guesses. Thank you! %n%n%n");
@@ -40,9 +39,7 @@ public class Game extends Application{
 		if(numPlayers<3 || numPlayers>6) {
 			System.out.printf("You have entered an incorrect amount of players. Please start the game over.%n");
 			System.exit(0);
-		} //else {
-		//	alpha = true;
-		//}
+		} 
 	
 		Card c = new Card();
 		GameManager gm = new GameManager(numPlayers);
@@ -216,7 +213,7 @@ public class Game extends Application{
 		arg0.setScene(s1);
 		arg0.show();
 		
-		
+		boolean alpha = false;
 		String ans = "";
 		TextField text = new TextField();
 		text.relocate(210, 150);
@@ -239,7 +236,7 @@ public class Game extends Application{
 		character.relocate(210, 200);
 		weapon.relocate(210,250);
 		room.relocate(210,300);
-		Label label1 = new Label();
+		Label label1 = new Label("");
 		label1.relocate(200, 125);
 		board.getChildren().addAll(label1, text, character, weapon, room, clear);
 		
@@ -320,8 +317,8 @@ public class Game extends Application{
 					}	
 				}
 			}
-		} while(alpha==true);
-		//moved alpha, then changed condition from ans.equals("y")
+		} while(ans.equals("y"));
+	
 			
 // THIS IS OUR OLD CODE*********************************************************************************************		
 		
