@@ -28,6 +28,7 @@ public class Game extends Application{
 	public void start(Stage arg0) throws Exception {	
 			
 		Scanner s = new Scanner(System.in);
+		int increment = 0;
 		
 		System.out.printf("Welcome to Clue! %n%n");
 		System.out.printf("PUBLIC SERVICE ANNOUCEMENT: Please have a notebook or a small piece of paper handy to keep track of your guesses. Thank you! %n%n%n");
@@ -276,12 +277,12 @@ public class Game extends Application{
 					if(counter == 3)
 					{
 						label1.setText("Correct! You have done did it, Congrats Sherlock!!");
-						alpha = false;
-						//System.exit(0);
+						System.exit(0);
 					}
 					else if(counter < 3)
 					{
 						label1.setText("Wrong! Sorry! You have lost!");
+						System.exit(0);
 					}
 				} else {
 					label1.setText("Who would you like to ask? Type players name: ");
@@ -317,7 +318,8 @@ public class Game extends Application{
 					}	
 				}
 			}
-		} while(ans.equals("y"));
+			increment++;
+		} while(increment<=5);
 	
 			
 // THIS IS OUR OLD CODE*********************************************************************************************		
