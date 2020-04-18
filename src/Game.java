@@ -7,6 +7,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -211,15 +213,26 @@ public class Game extends Application{
 		arg0.show();
 		
 		boolean alpha = true;
+		String ans = "";
 		TextField text = new TextField();
 		text.relocate(200, 200);
+		text.setOnKeyPressed(new EventHandler<KeyEvent>() {
+			@Override
+			public void handle(KeyEvent event)
+			{
+				if(event.getCode() == KeyCode.ENTER)
+				{
+					//ans = text.getText();
+					text.clear();
+				}
+			}
+		});
 		TextField character = new TextField();
 		TextField weapon = new TextField();
 		TextField room = new TextField();
 		Label label1 = new Label("Do you want to move rooms? (y/n)");
 		label1.relocate(200, 175);
 		board.getChildren().addAll(label1, text);
-		String ans = "";
 		
 		do 
 		{
