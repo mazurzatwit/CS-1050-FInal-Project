@@ -217,16 +217,14 @@ public class Game extends Application{
 		String ans = "";
 		TextField text = new TextField();
 		text.relocate(210, 200);
-//		Button clear = new Button("Enter");
-//		EventHandler<ActionEvent> clicked = new EventHandler<ActionEvent>() {
-//			@Override
-//			public void handle(ActionEvent e)
-//			{
-//				String response = text.getText();
-//				
-//				text.clear();
-//			}
-//		};
+		Button clear = new Button("Enter");
+		EventHandler<ActionEvent> clicked = new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent e)
+			{
+				text.clear();
+			}
+		};
 		TextField character = new TextField();
 		character.setPromptText("Enter Character Guess");
 		TextField weapon = new TextField();
@@ -238,7 +236,7 @@ public class Game extends Application{
 		room.relocate(210,350);
 		Label label1 = new Label("Do you want to move rooms? (y/n)");
 		label1.relocate(200, 175);
-		board.getChildren().addAll(label1, text, character, weapon, room);
+		board.getChildren().addAll(label1, text, character, weapon, room, clear);
 		
 		do 
 		{
@@ -246,14 +244,14 @@ public class Game extends Application{
 			{
 				label1.setText("Do you want to move rooms?(y/n)");
 				ans = text.getText();	
-				text.clear();
+				clear.setOnAction(clicked);
 				if(ans.equals("y")) 
 				{
 					label1.setText("Drag your designated circle your chosen roon and click the button of that room.");
 				}
 				label1.setText("Do you want to make a FINAL GUESS? (y/n)");
 				ans=text.getText();
-				text.clear();
+				clear.setOnAction(clicked);
 				
 				if(ans.equals("y")) 
 				{
@@ -287,7 +285,7 @@ public class Game extends Application{
 				} else {
 					label1.setText("Who would you like to ask? Type players name: ");
 					ans = text.getText();
-					text.clear();
+					clear.setOnAction(clicked);
 					ArrayList<String> guesses = p.guessing(s);
 					Hand guessingH = new Hand();
 					for(int a = 0; a < players.size(); a++)
