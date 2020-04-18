@@ -93,7 +93,7 @@ public class Game extends Application{
 		library.setOnAction(e -> {System.out.printf("You are now in the library.%n");});
 		Button ballroom = new Button("Ballroom");
 		ballroom.setStyle("-fx-background-color: #B22222;");
-		ballroom.setLayoutX(250);
+		ballroom.setLayoutX(160);
 		ballroom.setLayoutY(0);
 		ballroom.setOnAction(e -> {System.out.printf("You are now in the ballroom.%n");});
 		Button study = new Button("Study");
@@ -108,8 +108,8 @@ public class Game extends Application{
 		billardRoom.setOnAction(e -> {System.out.printf("You are now in the billard room.%n");});
 		Button conservatory = new Button("Conservatory");
 		conservatory.setStyle("-fx-background-color: #9ACD32;");
-		conservatory.setLayoutX(250);
-		conservatory.setLayoutY(250);
+		conservatory.setLayoutX(320);
+		conservatory.setLayoutY(0);
 		conservatory.setOnAction(e -> {System.out.printf("You are now in the conversatory.%n");});
 		Button kitchen = new Button("Kitchen");
 		kitchen.setStyle("-fx-background-color: #B0C4DE;");
@@ -230,6 +230,9 @@ public class Game extends Application{
 		TextField character = new TextField();
 		TextField weapon = new TextField();
 		TextField room = new TextField();
+		character.relocate(250, 250);
+		weapon.relocate(250,300);
+		room.relocate(250,350);
 		Label label1 = new Label("Do you want to move rooms? (y/n)");
 		label1.relocate(200, 175);
 		board.getChildren().addAll(label1, text);
