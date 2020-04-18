@@ -216,8 +216,10 @@ public class Game extends Application{
 		boolean alpha = true;
 		String ans = "";
 		TextField text = new TextField();
-		text.relocate(210, 200);
+		text.relocate(210, 150);
 		Button clear = new Button("Enter");
+		clear.setLayoutX(265);
+		clear.setLayoutY(350);
 		EventHandler<ActionEvent> clicked = new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent e)
@@ -231,11 +233,11 @@ public class Game extends Application{
 		weapon.setPromptText("Enter Weapon Guess");
 		TextField room = new TextField();
 		room.setPromptText("Enter Room Guess");
-		character.relocate(210, 250);
-		weapon.relocate(210,300);
-		room.relocate(210,350);
+		character.relocate(210, 200);
+		weapon.relocate(210,250);
+		room.relocate(210,300);
 		Label label1 = new Label("Do you want to move rooms? (y/n)");
-		label1.relocate(200, 175);
+		label1.relocate(200, 125);
 		board.getChildren().addAll(label1, text, character, weapon, room, clear);
 		
 		do 
