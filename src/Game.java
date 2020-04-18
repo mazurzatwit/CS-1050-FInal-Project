@@ -225,6 +225,7 @@ public class Game extends Application{
 			public void handle(ActionEvent e)
 			{
 				text.clear();
+				e.getSource();
 			}
 		};
 		TextField character = new TextField();
