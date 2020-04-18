@@ -215,7 +215,7 @@ public class Game extends Application{
 		boolean alpha = true;
 		String ans = "";
 		TextField text = new TextField();
-		text.relocate(200, 200);
+		text.relocate(210, 200);
 		text.setOnKeyPressed(new EventHandler<KeyEvent>() {
 			@Override
 			public void handle(KeyEvent event)
@@ -233,9 +233,9 @@ public class Game extends Application{
 		weapon.setPromptText("Enter Weapon Guess");
 		TextField room = new TextField();
 		room.setPromptText("Enter Room Guess");
-		character.relocate(250, 250);
-		weapon.relocate(250,300);
-		room.relocate(250,350);
+		character.relocate(210, 250);
+		weapon.relocate(210,300);
+		room.relocate(210,350);
 		Label label1 = new Label("Do you want to move rooms? (y/n)");
 		label1.relocate(200, 175);
 		board.getChildren().addAll(label1, text, character, weapon, room);
