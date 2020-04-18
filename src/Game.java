@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -216,15 +217,12 @@ public class Game extends Application{
 		String ans = "";
 		TextField text = new TextField();
 		text.relocate(210, 200);
-		text.setOnKeyPressed(new EventHandler<KeyEvent>() {
+		Button clear = new Button("Enter");
+		clear.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
-			public void handle(KeyEvent event)
+			public void handle(ActionEvent e)
 			{
-				if(event.getCode() == KeyCode.ENTER)
-				{
-					//ans = text.getText();
-					text.clear();
-				}
+				text.clear();
 			}
 		});
 		TextField character = new TextField();
