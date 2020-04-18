@@ -212,6 +212,9 @@ public class Game extends Application{
 		
 		boolean alpha = true;
 		TextField text = new TextField();
+		TextField character = new TextField();
+		TextField weapon = new TextField();
+		TextField room = new TextField();
 		Label label1 = new Label("Do you want to move rooms? (y/n)");
 		board.getChildren().addAll(label1, text);
 		String ans = "";
@@ -233,16 +236,13 @@ public class Game extends Application{
 				{
 					String[] solution = gm.getSolution();
 					ArrayList<String> guesses = new ArrayList<>();
-					TextField character = new TextField();
 					character.setPromptText("Enter Character Guess");
 					guesses.add(character.getText());
 					board.getChildren().add(character);
-					TextField weapon = new TextField();
 					weapon.setPromptText("Enter Weapon Guess");
 					guesses.add(weapon.getText());
 					board.getChildren().add(weapon);
-					TextField room = new TextField();
-					weapon.setPromptText("Enter Room Guess");
+					room.setPromptText("Enter Room Guess");
 					guesses.add(room.getText());
 					board.getChildren().add(room);
 					int counter = 0;
@@ -281,6 +281,12 @@ public class Game extends Application{
 					}
 					int counter=0;
 					
+					character.setPromptText("Enter Character Guess");
+					guesses.add(character.getText());
+					weapon.setPromptText("Enter Weapon Guess");
+					guesses.add(weapon.getText());
+					room.setPromptText("Enter Room Guess");
+					guesses.add(room.getText());
 					for(int w = 0; w < guesses.size(); w++)
 					{
 						String curr = guesses.get(w);
