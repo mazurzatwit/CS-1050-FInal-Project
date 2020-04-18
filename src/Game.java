@@ -212,10 +212,12 @@ public class Game extends Application{
 		
 		boolean alpha = true;
 		TextField text = new TextField();
+		text.relocate(200, 200);
 		TextField character = new TextField();
 		TextField weapon = new TextField();
 		TextField room = new TextField();
 		Label label1 = new Label("Do you want to move rooms? (y/n)");
+		label1.relocate(200, 175);
 		board.getChildren().addAll(label1, text);
 		String ans = "";
 		
