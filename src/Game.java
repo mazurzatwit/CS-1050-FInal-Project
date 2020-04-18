@@ -41,9 +41,9 @@ public class Game extends Application{
 			System.out.printf("You have entered an incorrect amount of players. Please start the game over.%n");
 			System.exit(0);
 		} //else {
-//			alpha = true;
-//		}
-//		
+		//	alpha = true;
+		//}
+	
 		Card c = new Card();
 		GameManager gm = new GameManager(numPlayers);
 		
