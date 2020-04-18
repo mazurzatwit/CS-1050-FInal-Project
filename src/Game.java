@@ -228,14 +228,17 @@ public class Game extends Application{
 			}
 		});
 		TextField character = new TextField();
+		character.setPromptText("Enter Character Guess");
 		TextField weapon = new TextField();
+		weapon.setPromptText("Enter Weapon Guess");
 		TextField room = new TextField();
+		room.setPromptText("Enter Room Guess");
 		character.relocate(250, 250);
 		weapon.relocate(250,300);
 		room.relocate(250,350);
 		Label label1 = new Label("Do you want to move rooms? (y/n)");
 		label1.relocate(200, 175);
-		board.getChildren().addAll(label1, text);
+		board.getChildren().addAll(label1, text, character, weapon, room);
 		
 		do 
 		{
@@ -254,15 +257,9 @@ public class Game extends Application{
 				{
 					String[] solution = gm.getSolution();
 					ArrayList<String> guesses = new ArrayList<>();
-					character.setPromptText("Enter Character Guess");
 					guesses.add(character.getText());
-					board.getChildren().add(character);
-					weapon.setPromptText("Enter Weapon Guess");
 					guesses.add(weapon.getText());
-					board.getChildren().add(weapon);
-					room.setPromptText("Enter Room Guess");
 					guesses.add(room.getText());
-					board.getChildren().add(room);
 					int counter = 0;
 					for(int n=0; n < solution.length; n++)
 					{
@@ -299,11 +296,8 @@ public class Game extends Application{
 					}
 					int counter=0;
 					
-					character.setPromptText("Enter Character Guess");
 					guesses.add(character.getText());
-					weapon.setPromptText("Enter Weapon Guess");
 					guesses.add(weapon.getText());
-					room.setPromptText("Enter Room Guess");
 					guesses.add(room.getText());
 					for(int w = 0; w < guesses.size(); w++)
 					{
