@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Player {
 
@@ -31,19 +29,4 @@ public class Player {
 		return name;
 	}
 	
-	public ArrayList<String> guessing(Scanner s)
-	{
-		ArrayList<String> guess = new ArrayList<>();
-		System.out.printf("Murderer Guess: ");
-		String response = s.nextLine();
-		guess.add(response);
-		System.out.printf("Room Guess: ");
-		response = s.nextLine();
-		guess.add(response);
-		System.out.printf("Murderer Guess: ");
-		response = s.nextLine();
-		guess.add(response);
-		
-		return guess;
-	}
 }
